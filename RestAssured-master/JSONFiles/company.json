@@ -1,0 +1,92 @@
+{
+  "company": "Tech Innovators Inc.",
+  "employees": [
+    {
+      "employeeId": "E001",
+      "fullName": "Robert King",
+      "department": "Engineering",
+      "role": "Software Engineer",
+      "details": {
+        "age": 26,
+        "salary": 80000,
+        "contact": {
+          "email": "robert.king@techinnovators.com",
+          "phone": "123-456-7890"
+        }
+      }
+    },
+    {
+      "employeeId": "E002",
+      "fullName": "Linda Green",
+      "department": "Marketing",
+      "role": "Marketing Manager",
+      "details": {
+        "age": 34,
+        "salary": 90000,
+        "contact": {
+          "email": "linda.green@techinnovators.com",
+          "phone": "123-456-7891"
+        }
+      }
+    },
+    {
+      "employeeId": "E003",
+      "fullName": "Samuel Lee",
+      "department": "Sales",
+      "role": "Sales Executive",
+      "details": {
+        "age": 29,
+        "salary": 75000,
+        "contact": {
+          "email": "samuel.lee@techinnovators.com",
+          "phone": "123-456-7892"
+        }
+      }
+    },
+    {
+      "employeeId": "E004",
+      "fullName": "Nina Patel",
+      "department": "Human Resources",
+      "role": "HR Specialist",
+      "details": {
+        "age": 31,
+        "salary": 70000,
+        "contact": {
+          "email": "nina.patel@techinnovators.com",
+          "phone": "123-456-7893"
+        }
+      }
+    },
+    {
+      "employeeId": "E005",
+      "fullName": "David Kim",
+      "department": "Finance",
+      "role": "Financial Analyst",
+      "details": {
+        "age": 27,
+        "salary": 85000,
+        "contact": {
+          "email": "david.kim@techinnovators.com",
+          "phone": "123-456-7894"
+        }
+      }
+    }
+  ],
+  "locations": [
+    {
+      "officeId": "O001",
+      "city": "New York",
+      "address": "123 Main St, New York, NY 10001"
+    },
+    {
+      "officeId": "O002",
+      "city": "San Francisco",
+      "address": "456 Market St, San Francisco, CA 94105"
+    },
+    {
+      "officeId": "O003",
+      "city": "Chicago",
+      "address": "789 Lake Shore Dr, Chicago, IL 60601"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+package parsing;
+
+import com.github.scribejava.core.model.Response;
+
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PracticeHexaware {
+	
+	public void test() {
+		RequestSpecification requestSpecification = RestAssured.given();
+		
+		io.restassured.response.Response res = requestSpecification.get("https://reqres.in/api/users?page=2");
+		
+		res.then().log().all().statusCode(200);
+		
+	}
+	
+	
+	
+	
+}

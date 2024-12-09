@@ -1,0 +1,26 @@
+package parsing;
+
+import org.testng.annotations.Test;
+
+import com.github.scribejava.core.model.Response;
+
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PracticeHexaware {
+	
+	@Test
+	public void test() {
+		RequestSpecification requestSpecification = RestAssured.given();
+		
+		io.restassured.response.Response res = requestSpecification.get("https://reqres.in/api/users?page=2");
+		
+		res.then().log().all().statusCode(200);
+		
+	}
+	
+	
+	
+	
+}

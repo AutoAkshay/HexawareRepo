@@ -1,0 +1,134 @@
+{
+  "students": [
+    {
+      "studentId": "S001",
+      "fullName": "Alice Johnson",
+      "grade": "A",
+      "details": {
+        "age": 20,
+        "major": "Computer Science",
+        "contact": {
+          "email": "alice.johnson@example.com",
+          "phone": "123-456-7890"
+        }
+      }
+    },
+    {
+      "studentId": "S002",
+      "fullName": "Bob Smith",
+      "grade": "B",
+      "details": {
+        "age": 22,
+        "major": "Mathematics",
+        "contact": {
+          "email": "bob.smith@example.com",
+          "phone": "234-567-8901"
+        }
+      }
+    },
+    {
+      "studentId": "S003",
+      "fullName": "Carol White",
+      "grade": "A",
+      "details": {
+        "age": 21,
+        "major": "Physics",
+        "contact": {
+          "email": "carol.white@example.com",
+          "phone": "345-678-9012"
+        }
+      }
+    },
+    {
+      "studentId": "S004",
+      "fullName": "David Brown",
+      "grade": "C",
+      "details": {
+        "age": 23,
+        "major": "Chemistry",
+        "contact": {
+          "email": "david.brown@example.com",
+          "phone": "456-789-0123"
+        }
+      }
+    },
+    {
+      "studentId": "S005",
+      "fullName": "Eve Davis",
+      "grade": "B",
+      "details": {
+        "age": 20,
+        "major": "Biology",
+        "contact": {
+          "email": "eve.davis@example.com",
+          "phone": "567-890-1234"
+        }
+      }
+    },
+    {
+      "studentId": "S006",
+      "fullName": "Frank Miller",
+      "grade": "A",
+      "details": {
+        "age": 22,
+        "major": "Engineering",
+        "contact": {
+          "email": "frank.miller@example.com",
+          "phone": "678-901-2345"
+        }
+      }
+    },
+    {
+      "studentId": "S007",
+      "fullName": "Grace Wilson",
+      "grade": "C",
+      "details": {
+        "age": 21,
+        "major": "History",
+        "contact": {
+          "email": "grace.wilson@example.com",
+          "phone": "789-012-3456"
+        }
+      }
+    },
+    {
+      "studentId": "S008",
+      "fullName": "Henry Moore",
+      "grade": "B",
+      "details": {
+        "age": 23,
+        "major": "Philosophy",
+        "contact": {
+          "email": "henry.moore@example.com",
+          "phone": "890-123-4567"
+        }
+      }
+    },
+    {
+      "studentId": "S009",
+      "fullName": "Ivy Taylor",
+      "grade": "A",
+      "details": {
+        "age": 20,
+        "major": "Economics",
+        "contact": {
+          "email": "ivy.taylor@example.com",
+          "phone": "901-234-5678"
+        }
+      }
+    },
+    {
+      "studentId": "S010",
+      "fullName": "Jack Anderson",
+      "grade": "C",
+      "details": {
+        "age": 22,
+        "major": "Political Science",
+        "contact": {
+          "email": "jack.anderson@example.com",
+          "phone": "012-345-6789"
+        }
+      }
+    }
+  ]
+}

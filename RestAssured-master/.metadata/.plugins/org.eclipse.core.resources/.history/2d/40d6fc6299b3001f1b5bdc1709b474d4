@@ -1,0 +1,43 @@
+package parsing;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import com.github.scribejava.core.model.Response;
+
+
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.specification.RequestSpecification;
+
+public class PracticeHexaware {
+	
+	@Test
+	public void test() {
+		RequestSpecification requestSpecification = RestAssured.given();
+		
+		io.restassured.response.Response res = requestSpecification.get("https://reqres.in/api/users?page=2");
+		
+		JsonPath jsonPath=new JsonPath(res.asString());
+		
+		JSONObject object=new JSONObject(jsonPath);
+		
+		JSONArray array=object.getJSONArray("data");
+		
+		for (int i = 0; i < array.length()-1; i++) {
+			
+			JSONObject jsonObject = array.getJSONObject(i);
+			
+			if(jsonObject.get("first_name").equals("George")) {
+				System.out.println(jsonObject.get("id"));
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	
+}

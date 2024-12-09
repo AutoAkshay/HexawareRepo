@@ -1,0 +1,146 @@
+package parsing;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.restassured.path.json.JsonPath;
+
+class contact{
+	
+	private String email;
+	private int phone;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public int getPhone() {
+		return phone;
+	}
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}	
+}
+
+class Details{
+	private int age;
+	private int salary;
+	private contact contact;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public contact getContact() {
+		return contact;
+	}
+	public void setContact(contact contact) {
+		this.contact = contact;
+	}	
+}
+
+class Employees{
+	private String employeeId;
+	private String fullName;
+	private String department;
+	private String role;
+	private Details details;
+	public String getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public Details getDetails() {
+		return details;
+	}
+	public void setDetails(Details details) {
+		this.details = details;
+	}	
+}
+
+class Company{
+	private String company;
+	private List<Employees> employees;
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public List<Employees> getEmployees() {
+		return employees;
+	}
+	public void setEmployees(List<Employees> employees) {
+		this.employees = employees;
+	}
+}
+public class PracticeHexaware {
+
+	@Test
+	public void test() throws JsonProcessingException {
+		
+		contact contact=new contact();
+		contact.setEmail("robert.king@techinnovators.com");
+		contact.setPhone(123-456-7890);
+		
+		Details details=new Details();
+		details.setAge(26);
+		details.setSalary(80000);
+		details.setContact(contact);
+		
+		Employees employees=new Employees();
+		employees.setEmployeeId("E001");
+		employees.setFullName("Robert King");
+		employees.setDepartment("Engineering");
+		employees.setRole("Software Engineer");
+		employees.setDetails(details);
+		List<Employees>emp= new ArrayList<>();
+		emp.add(employees);
+		
+		Company company=new Company();
+		company.setCompany("Tech Innovators Inc.");
+		company.setEmployees(emp);
+		
+		ObjectMapper mapper=new ObjectMapper();
+		
+		String empDetails=mapper.writerWithDefaultPrettyPrinter().writeValueAsString(emp);
+		
+		System.out.println(empDetails);
+		
+	}
+
+}

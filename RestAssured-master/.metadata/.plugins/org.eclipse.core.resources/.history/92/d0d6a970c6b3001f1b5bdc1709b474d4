@@ -1,0 +1,29 @@
+package parsing;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+import io.restassured.response.Response;
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.specification.RequestSpecification;
+
+public class PracticeHexaware {
+	
+	@Test
+	public void test() {
+		RequestSpecification requestSpecification = RestAssured.given().baseUri("https://reqres.in/api/users?page=2");
+		
+		Response res = requestSpecification.get("https://reqres.in/api/users?page=2");
+		
+		JsonPath jsonPath=new JsonPath(res.asString());
+		String email=jsonPath.get("data[4].email");
+		
+		System.out.println(email);
+		
+	}
+	
+	
+	
+	
+}
