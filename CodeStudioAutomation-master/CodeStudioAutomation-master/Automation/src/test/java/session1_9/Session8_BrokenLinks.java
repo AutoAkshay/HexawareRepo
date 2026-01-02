@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Session8_BrokenLinks {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
@@ -23,7 +23,7 @@ public class Session8_BrokenLinks {
 
 		driver.manage().window().maximize();
 		driver.get("http://www.deadlinkcity.com/");
-
+		Thread.sleep(5000);
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		int resCode = 200;
 		int brokenLink = 0;
@@ -32,6 +32,7 @@ public class Session8_BrokenLinks {
 
 			try {
 				URL urlLinks = new URL(url);
+
 				HttpURLConnection huc = (HttpURLConnection) urlLinks.openConnection();
 				huc.setRequestMethod("HEAD");
 				huc.connect();
@@ -54,7 +55,9 @@ public class Session8_BrokenLinks {
 
 		}
 
-		System.out.println("Broken Link" + brokenLink);
+		System.out.println("Broken Link::" + brokenLink);
+
+		driver.quit();
 	}
 
 }

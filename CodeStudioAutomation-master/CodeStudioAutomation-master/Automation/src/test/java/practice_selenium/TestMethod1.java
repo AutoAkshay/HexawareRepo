@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 
 
-public class RetryAnalyzerClass implements IRetryAnalyzer {
+public class TestMethod1 implements IRetryAnalyzer {
 
 	@Override
 	public boolean retry(ITestResult result) {

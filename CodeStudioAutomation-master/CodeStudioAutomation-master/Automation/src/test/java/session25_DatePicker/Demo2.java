@@ -33,7 +33,7 @@ public class Demo2 {
 			String caption = driver.findElement(By.className("DayPicker-Caption")).getText();
 			if (expectedMMYY.equals(caption)) 
 			{
-				List<WebElement> dayPicker = driver.findElements(By.className("fsw__date"));
+				List<WebElement> dayPicker = driver.findElements(By.className("dateInnerCell'"));
 
 				for (WebElement e : dayPicker) {
 					String dates = e.getText();

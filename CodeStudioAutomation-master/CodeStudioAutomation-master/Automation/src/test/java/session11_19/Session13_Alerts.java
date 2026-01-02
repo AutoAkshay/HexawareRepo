@@ -35,6 +35,7 @@ public class Session13_Alerts {
 		Thread.sleep(3000);
 		driver.switchTo().alert().sendKeys("Akshay Kalam");	
 		driver.switchTo().alert().accept();
+		String str=driver.switchTo().alert().getText();
 		System.out.println("Alert is accepted with message");
 		
 	}

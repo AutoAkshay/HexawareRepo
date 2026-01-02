@@ -20,7 +20,7 @@ public class Session2_Color {
 		driver.get("https://www.google.com/");
 		WebElement signInButtonColor=driver.findElement(By.xpath("//*[@aria-label='Sign in']"));
 		
-		String background=signInButtonColor.getCssValue("background");
+		String background=signInButtonColor.getCssValue("background-color");
 		
 		Color color= Color.fromString(background);
 		

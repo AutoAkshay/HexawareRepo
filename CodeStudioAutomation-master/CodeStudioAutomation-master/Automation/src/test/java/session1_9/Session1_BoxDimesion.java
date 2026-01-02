@@ -7,14 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Session1_BoxDimesion {
 	
 	public static void main(String[] args) {
-		
-		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriverManager.chromedriver().setup();
+//		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options = new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.google.com/");
@@ -27,6 +29,8 @@ public class Session1_BoxDimesion {
 		System.out.println("===================");
 		System.out.println("height::"+dimension.height);
 		System.out.println("Width::"+dimension.width);
+		
+		driver.quit();
 		
 		
 	}
