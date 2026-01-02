@@ -28,7 +28,7 @@ public class ExtentReportDemo {
 		reports=new ExtentReports();
 		reports.attachReporter(htmlReporter);
 		
-		reports.setSystemInfo("Machie", "testpc1");
+		reports.setSystemInfo("Machine", "testpc1");
 		reports.setSystemInfo("OS", "Windows 10");
 		reports.setSystemInfo("user", "Akshay");
 		reports.setSystemInfo("Browser", "chrome");
