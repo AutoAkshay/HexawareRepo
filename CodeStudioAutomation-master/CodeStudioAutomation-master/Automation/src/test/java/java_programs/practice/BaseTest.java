@@ -42,8 +42,9 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) {
-		if(driver!=null)
+		if(driver!=null){
 		driver.quit();
+		}
 		logger.info("Browser closed");	
 	}
 	
