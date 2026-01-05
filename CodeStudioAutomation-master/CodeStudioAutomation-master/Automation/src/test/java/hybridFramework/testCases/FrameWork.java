@@ -59,7 +59,7 @@ public class FrameWork extends BaseTest {
 
 	}
 	
-//	@Test(priority=2, retryAnalyzer = RetryFailedCase.class)
+	@Test(priority=2, retryAnalyzer = RetryFailedCase.class)
 	public void webTableValidation() throws IOException, InterruptedException {
 		helper = new CommonHelper(driver);
 
