@@ -43,6 +43,6 @@ public class DriverFactory {
 
     public static void quitDriver(){
         driver.quit();
-        driver.manage().window().maximize();
+        driver.get("");
     }
 }
