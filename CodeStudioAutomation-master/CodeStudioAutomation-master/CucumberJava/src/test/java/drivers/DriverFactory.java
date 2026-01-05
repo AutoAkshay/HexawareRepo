@@ -42,7 +42,6 @@ public class DriverFactory {
     }
 
     public static void quitDriver(){
-
         driver.quit();
     }
 }
