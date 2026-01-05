@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory {
     public static WebDriver driver;
     public static String browser="chrome";
+
     public static WebDriver getDriver(){
 
         switch (browser){
@@ -41,6 +42,7 @@ public class DriverFactory {
     }
 
     public static void quitDriver(){
+
         driver.quit();
     }
 }
