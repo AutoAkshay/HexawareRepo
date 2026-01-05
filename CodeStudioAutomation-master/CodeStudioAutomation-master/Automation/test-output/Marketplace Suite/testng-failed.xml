@@ -3,7 +3,7 @@
 <suite thread-count="2" parallel="methods" name="Failed suite [Marketplace Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="methods" name="Marketplace Parallel Classes(failed)">
     <classes>
-      <class name="java_programs.practice.FrameWork">
+      <class name="basicJava.tryCatchBlock.FrameWork">
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
@@ -12,7 +12,7 @@
           <include name="webTableValidation"/>
           <include name="marketPlace" invocation-numbers="0 0 0"/>
         </methods>
-      </class> <!-- java_programs.practice.FrameWork -->
+      </class> <!-- basicJava.tryCatchBlock.FrameWork -->
     </classes>
   </test> <!-- Marketplace Parallel Classes(failed) -->
 </suite> <!-- Failed suite [Marketplace Suite] -->

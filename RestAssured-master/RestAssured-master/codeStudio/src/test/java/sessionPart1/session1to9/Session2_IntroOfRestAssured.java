@@ -28,10 +28,10 @@ public class Session2_IntroOfRestAssured{
 	
 	@Test
 	void getRequest() {
+		RequestSpecification reqSpec=given().headers("Authorization","x-api-key").baseUri("https://reqres.in/api/users/2");
+		Response res=reqSpec.get();
 		
-		Response res=RestAssured.get("https://reqres.in/api/users/2");
-		
-		System.out.println(res.asString());
+		System.out.println(res.prettyPrint());
 		
 		System.out.println(res.statusCode());
 		System.out.println(res.timeIn(TimeUnit.MILLISECONDS));

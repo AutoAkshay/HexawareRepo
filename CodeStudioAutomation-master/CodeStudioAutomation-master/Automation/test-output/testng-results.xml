@@ -6,16 +6,16 @@
     <groups>
     </groups>
     <test started-at="2026-01-02T16:45:44 IST" name="Default test" finished-at="2026-01-02T16:46:21 IST" duration-ms="37462">
-      <class name="java_programs.practice.FrameWork">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:44 IST" name="beforeTest" finished-at="2026-01-02T16:45:44 IST" duration-ms="3" status="PASS">
+      <class name="basicJava.tryCatchBlock.FrameWork">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:44 IST" name="beforeTest" finished-at="2026-01-02T16:45:44 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:44 IST" name="setUp" finished-at="2026-01-02T16:45:45 IST" duration-ms="1316" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:44 IST" name="setUp" finished-at="2026-01-02T16:45:45 IST" duration-ms="1316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="marketPlace(java.lang.String)[pri:1, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:45 IST" name="marketPlace" data-provider="quantity" finished-at="2026-01-02T16:45:55 IST" duration-ms="9988" status="PASS">
+        <test-method signature="marketPlace(java.lang.String)[pri:1, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:45 IST" name="marketPlace" data-provider="quantity" finished-at="2026-01-02T16:45:55 IST" duration-ms="9988" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,30 +26,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- marketPlace -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:55 IST" name="tearDown" finished-at="2026-01-02T16:45:55 IST" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:55 IST" name="tearDown" finished-at="2026-01-02T16:45:55 IST" duration-ms="86" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=marketPlace status=SUCCESS method=FrameWork.marketPlace(java.lang.String)[pri:1, instance:java_programs.practice.FrameWork@71238fc2] output={null}]]]>
+                  <![CDATA[[TestResult name=marketPlace status=SUCCESS method=FrameWork.marketPlace(java.lang.String)[pri:1, instance:basicJava.tryCatchBlock.FrameWork@71238fc2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:55 IST" name="setUp" finished-at="2026-01-02T16:45:56 IST" duration-ms="863" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:55 IST" name="setUp" finished-at="2026-01-02T16:45:56 IST" duration-ms="863" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method retried="true" signature="webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:45:56 IST" name="webTableValidation" finished-at="2026-01-02T16:46:04 IST" duration-ms="8021" status="SKIP">
+        <test-method retried="true" signature="webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:45:56 IST" name="webTableValidation" finished-at="2026-01-02T16:46:04 IST" duration-ms="8021" status="SKIP">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[Failed to click the element::By.id: ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id: 
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:45)
-at java_programs.practice.FrameWork.webTableValidation(FrameWork.java:89)
+                <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id:
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:45)
+at basicJava.tryCatchBlock.FrameWork.webTableValidation(FrameWork.java:89)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
@@ -104,7 +104,7 @@ at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:40)
 ... 27 more
 ]]>
             </full-stacktrace>
@@ -112,30 +112,30 @@ at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webTableValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:04 IST" name="tearDown" finished-at="2026-01-02T16:46:04 IST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:04 IST" name="tearDown" finished-at="2026-01-02T16:46:04 IST" duration-ms="88" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=webTableValidation status=SKIP method=FrameWork.webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2] output={null}]]]>
+                  <![CDATA[[TestResult name=webTableValidation status=SKIP method=FrameWork.webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:04 IST" name="setUp" finished-at="2026-01-02T16:46:05 IST" duration-ms="501" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:04 IST" name="setUp" finished-at="2026-01-02T16:46:05 IST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method retried="true" signature="webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:05 IST" name="webTableValidation" finished-at="2026-01-02T16:46:12 IST" duration-ms="7541" status="SKIP">
+        <test-method retried="true" signature="webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:05 IST" name="webTableValidation" finished-at="2026-01-02T16:46:12 IST" duration-ms="7541" status="SKIP">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[Failed to click the element::By.id: ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id: 
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:45)
-at java_programs.practice.FrameWork.webTableValidation(FrameWork.java:89)
+                <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id:
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:45)
+at basicJava.tryCatchBlock.FrameWork.webTableValidation(FrameWork.java:89)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
@@ -190,7 +190,7 @@ at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:40)
 ... 27 more
 ]]>
             </full-stacktrace>
@@ -198,30 +198,30 @@ at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webTableValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:12 IST" name="tearDown" finished-at="2026-01-02T16:46:12 IST" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:12 IST" name="tearDown" finished-at="2026-01-02T16:46:12 IST" duration-ms="84" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=webTableValidation status=SKIP method=FrameWork.webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2] output={null}]]]>
+                  <![CDATA[[TestResult name=webTableValidation status=SKIP method=FrameWork.webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:12 IST" name="setUp" finished-at="2026-01-02T16:46:13 IST" duration-ms="609" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:12 IST" name="setUp" finished-at="2026-01-02T16:46:13 IST" duration-ms="609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:13 IST" name="webTableValidation" finished-at="2026-01-02T16:46:21 IST" duration-ms="8094" status="FAIL">
+        <test-method signature="webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:13 IST" name="webTableValidation" finished-at="2026-01-02T16:46:21 IST" duration-ms="8094" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[Failed to click the element::By.id: ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id: 
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:45)
-at java_programs.practice.FrameWork.webTableValidation(FrameWork.java:89)
+                <![CDATA[java.lang.RuntimeException: Failed to click the element::By.id:
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:45)
+at basicJava.tryCatchBlock.FrameWork.webTableValidation(FrameWork.java:89)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
@@ -276,7 +276,7 @@ at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
 at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
+at basicJava.tryCatchBlock.CommonHelper.clickOnElement(CommonHelper.java:40)
 ... 27 more
 ]]>
             </full-stacktrace>
@@ -284,22 +284,22 @@ at java_programs.practice.CommonHelper.clickOnElement(CommonHelper.java:40)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webTableValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:21 IST" name="tearDown" finished-at="2026-01-02T16:46:21 IST" duration-ms="86" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:21 IST" name="tearDown" finished-at="2026-01-02T16:46:21 IST" duration-ms="86" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=webTableValidation status=FAILURE method=FrameWork.webTableValidation()[pri:2, instance:java_programs.practice.FrameWork@71238fc2] output={null}]]]>
+                  <![CDATA[[TestResult name=webTableValidation status=FAILURE method=FrameWork.webTableValidation()[pri:2, instance:basicJava.tryCatchBlock.FrameWork@71238fc2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:java_programs.practice.FrameWork@71238fc2]" started-at="2026-01-02T16:46:21 IST" name="afterTest" finished-at="2026-01-02T16:46:21 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:basicJava.tryCatchBlock.FrameWork@71238fc2]" started-at="2026-01-02T16:46:21 IST" name="afterTest" finished-at="2026-01-02T16:46:21 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- java_programs.practice.FrameWork -->
+      </class> <!-- basicJava.tryCatchBlock.FrameWork -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

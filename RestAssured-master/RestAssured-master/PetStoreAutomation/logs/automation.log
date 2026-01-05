@@ -1749,3 +1749,21 @@
 10:32:37.019 [INFO] api.test.UserTest - ********************User Info Updated**********************
 10:32:37.022 [INFO] api.test.UserTest - ********************deleting User Info**********************
 10:32:38.118 [INFO] api.test.UserTest - ********************User Info deleted**********************
+19:59:31.042 [INFO] api.test.UserTest - ********************Creating User**********************
+19:59:33.078 [INFO] api.test.UserTest - ********************User Created**********************
+19:59:33.079 [INFO] api.test.UserTest - ********************Reading User Info**********************
+19:59:34.457 [INFO] api.test.UserTest - ********************User Info Displayed**********************
+19:59:34.460 [INFO] api.test.UserTest - ********************Updating User Info**********************
+19:59:37.341 [INFO] api.test.UserTest - ********************User Info Updated**********************
+19:59:37.345 [INFO] api.test.UserTest - ********************deleting User Info**********************
+19:59:38.749 [INFO] api.test.UserTest - ********************User Info deleted**********************
+10:57:45.716 [INFO] api.test.UserTest - ********************Creating User**********************
+10:57:47.799 [INFO] api.test.UserTest - ********************User Created**********************
+10:57:53.255 [INFO] api.test.UserTest - ********************Creating User**********************
+10:57:54.827 [INFO] api.test.UserTest - ********************User Created**********************
+10:57:54.829 [INFO] api.test.UserTest - ********************Reading User Info**********************
+10:57:56.101 [INFO] api.test.UserTest - ********************User Info Displayed**********************
+10:57:56.104 [INFO] api.test.UserTest - ********************Updating User Info**********************
+10:57:58.419 [INFO] api.test.UserTest - ********************User Info Updated**********************
+10:57:58.421 [INFO] api.test.UserTest - ********************deleting User Info**********************
+10:57:59.982 [INFO] api.test.UserTest - ********************User Info deleted**********************
