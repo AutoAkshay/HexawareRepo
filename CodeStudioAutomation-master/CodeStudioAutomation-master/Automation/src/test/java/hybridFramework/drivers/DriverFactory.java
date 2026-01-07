@@ -7,11 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.IOException;
 
 public class DriverFactory {
-	
+
 	public static WebDriver driver() throws IOException {
 		ReadPropertiesFile propertiesFile=new ReadPropertiesFile();
 		String browser= propertiesFile.browser();
@@ -29,9 +30,8 @@ public class DriverFactory {
 			driver=new EdgeDriver();
 			 break;
 		
-		case "internet explorer": 
-			WebDriverManager.iedriver().setup();
-			driver=new InternetExplorerDriver();
+		case "safari":
+			driver=new SafariDriver();
 			break;
 		
 		default: 

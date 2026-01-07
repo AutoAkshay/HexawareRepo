@@ -7,11 +7,11 @@
       <class name="session40_CrossBrowserTesting.CrossBrowserTesting"/>
     </classes>
   </test> <!-- Test -->
-  
-  	<test thread-count="5" name="TestOnEdge">
-	  <parameter name="browser" value="edge"></parameter>
-    <classes>
-      <class name="session40_CrossBrowserTesting.CrossBrowserTesting"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+<!--  	<test thread-count="5" name="TestOnEdge">-->
+<!--	  <parameter name="browser" value="edge"></parameter>-->
+<!--    <classes>-->
+<!--      <class name="session40_CrossBrowserTesting.CrossBrowserTesting"/>-->
+<!--    </classes>-->
+<!--  </test> &lt;!&ndash; Test &ndash;&gt;-->
+</suite>

@@ -3,6 +3,7 @@
 
 <suite name="Marketplace Suite" parallel="methods" thread-count="2">
     <test name="Marketplace Parallel Classes">
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="hybridFramework.testCases.FrameWork"/>
         </classes>

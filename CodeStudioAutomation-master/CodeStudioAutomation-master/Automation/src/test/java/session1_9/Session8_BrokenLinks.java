@@ -16,10 +16,10 @@ public class Session8_BrokenLinks {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver = new ChromeDriver(options);
+//		System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options = new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		WebDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 		driver.get("http://www.deadlinkcity.com/");

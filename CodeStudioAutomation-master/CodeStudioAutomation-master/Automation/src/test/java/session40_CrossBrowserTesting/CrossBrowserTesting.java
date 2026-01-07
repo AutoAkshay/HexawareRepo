@@ -26,12 +26,7 @@ public class CrossBrowserTesting {
 		switch (broswer.toLowerCase()){
 		case "chrome": 
 		{
-			
-			System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-			driver = new ChromeDriver(options);
-
+			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
 		}
