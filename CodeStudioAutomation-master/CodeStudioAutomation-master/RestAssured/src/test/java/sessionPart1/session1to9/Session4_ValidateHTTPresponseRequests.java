@@ -37,14 +37,14 @@ public class Session4_ValidateHTTPresponseRequests{
 		RestAssured.baseURI="https://reqres.in/api/users/2";
 	//	RestAssured.when().get().then().log().all().statusCode(200);
 		
-		RequestSpecification requestSpec=RestAssured.given();
+		RequestSpecification requestSpec=RestAssured.given().header("Authorization","x-api-key");
 		
 		Response response=requestSpec.get();
 		
 		ValidatableResponse validateRes= response.then().log().all();
 		System.out.println(validateRes);
-//		validateRes.statusLine("HTTP/1.1 200 OK");
-//		validateRes.body("data.first_name", equalTo("Janet"));
+		validateRes.statusLine("HTTP/1.1 200 OK");
+		validateRes.body("data.first_name", equalTo("Janet"));
 		
 	}
 	

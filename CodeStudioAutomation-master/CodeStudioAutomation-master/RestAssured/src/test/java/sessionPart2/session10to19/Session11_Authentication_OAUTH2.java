@@ -32,7 +32,7 @@ import io.restassured.specification.ResponseSpecification;
 public class Session11_Authentication_OAUTH2{
 
 	//key :- fe9c5cddb7e01d747b4611c3fc9eaf2c
-//	@Test
+	@Test
 	void AuthorozationKey() {
 		
 		RestAssured.baseURI="https://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=matric&cnt=7";

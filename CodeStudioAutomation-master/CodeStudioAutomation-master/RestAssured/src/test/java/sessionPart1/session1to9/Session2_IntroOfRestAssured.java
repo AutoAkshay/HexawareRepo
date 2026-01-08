@@ -29,9 +29,9 @@ public class Session2_IntroOfRestAssured{
 	@Test
 	void getRequest() {
 		
-		Response res=RestAssured.get("https://reqres.in/api/users/2");
+		Response res=RestAssured.given().header("Authorization","x-api-key").get("https://reqres.in/api/users/2");
 		
-		System.out.println(res.asString());
+		System.out.println(res.prettyPrint());
 		
 		System.out.println(res.statusCode());
 		System.out.println(res.timeIn(TimeUnit.MILLISECONDS));

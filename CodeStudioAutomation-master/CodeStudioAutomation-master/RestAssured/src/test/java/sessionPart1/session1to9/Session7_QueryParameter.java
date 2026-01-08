@@ -43,14 +43,14 @@ public class Session7_QueryParameter{
 		
 		//second type
 		
-		RequestSpecification resSpec= RestAssured.given();
+		RequestSpecification resSpec= RestAssured.given().header("Authorization","x-api-key");
 		resSpec.baseUri("https://reqres.in/");//https://reqres.in/api/users?page=2&id=10
 		resSpec.basePath("api/users");
 		resSpec.queryParam("page", 2).queryParam("id", "10");
 		
 		Response response= resSpec.get();
 		ResponseBody body= response.getBody();
-		String resBody=body.asString();
+		String resBody=body.prettyPrint();
 		
 		JsonPath jsonPath= body.jsonPath();
 		

@@ -45,7 +45,7 @@ public class Session16_JSONArrayUsingJSONobject {
 		jsonObj.put("course", courses);
 		
 		RequestSpecification reqSpec=RestAssured.given().body(jsonObj.toString()).contentType(ContentType.JSON);
-		reqSpec.baseUri("https://reqres.in/");
+		reqSpec.baseUri("https://reqres.in/").header("Authorization","x-api-key");
 		reqSpec.basePath("api/users");
 		Response res= reqSpec.post();
 		

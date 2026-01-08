@@ -72,7 +72,8 @@ public class Session3_HTTPrequests{
 		
 		RestAssured.baseURI="https://reqres.in/api/users";
 		
-		id=RestAssured.given().contentType(ContentType.JSON).body(jsonObject.toString())
+		id=RestAssured.given().header("Authorization","x-api-key")
+				.contentType(ContentType.JSON).body(jsonObject.toString())
 		.when()
 			.post().jsonPath().getInt("id");
 		
@@ -89,7 +90,7 @@ public class Session3_HTTPrequests{
 		
 		RestAssured.baseURI="https://reqres.in/api/users/"+id;
 		
-		RestAssured.given().contentType(ContentType.JSON).body(jsonObject.toString())
+		RestAssured.given().header("Authorization","x-api-key").contentType(ContentType.JSON).body(jsonObject.toString())
 		.when()
 			.put()
 		.then()
@@ -108,7 +109,8 @@ public class Session3_HTTPrequests{
 		
 		RestAssured.baseURI="https://reqres.in/api/users/"+id;
 		
-		RestAssured.given().contentType(ContentType.JSON).body(jsonObject.toString())
+		RestAssured.given().header("Authorization","x-api-key")
+				.contentType(ContentType.JSON).body(jsonObject.toString())
 		.when()
 			.patch()
 		.then()
@@ -125,7 +127,8 @@ public class Session3_HTTPrequests{
 		
 		RestAssured.baseURI="https://reqres.in/api/users/"+id;
 		
-		RestAssured.given().contentType(ContentType.JSON).body(jsonObject.toString())
+		RestAssured.given().header("Authorization","x-api-key")
+				.contentType(ContentType.JSON).body(jsonObject.toString())
 		.when()
 			.delete();
 		

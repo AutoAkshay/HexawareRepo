@@ -30,17 +30,17 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Session6_ValidateJSONResponseBody{
 
-//	@Test
+	@Test
 	void test01() {
 		
-		RequestSpecification reqSpec=RestAssured.given();
+		RequestSpecification reqSpec=RestAssured.given().header("Authorization","x-api-key");
 		
 		reqSpec.baseUri("https://reqres.in/");
 		reqSpec.basePath("api/users/2");
 		
 		Response res= reqSpec.get();
 		
-		String resBody=res.getBody().asString();
+		String resBody=res.getBody().prettyPrint();
 		
 		System.out.println("Response Body::"+resBody);
 		
@@ -52,33 +52,24 @@ public class Session6_ValidateJSONResponseBody{
 	@Test
 	void test02() {
 		
-		RequestSpecification reqSpec=RestAssured.given();
+		RequestSpecification reqSpec=RestAssured.given().header("Authorization","x-api-key");
 		
-		Response response= given()
-		
-		.when().get("https://reqres.in/api/users?page=2");
+		Response response= reqSpec.when().get("https://reqres.in/api/users?page=2");
 		
 		ResponseBody body= response.getBody();
 		
 		JsonPath path= body.jsonPath();
 		
-//		System.out.println(path.get("data[2].avatar").toString());
-		System.out.println(response.getBody().jsonPath().get("data[2].avatar").toString());
+		System.out.println(path.get("data[2].avatar").toString());
+		System.out.println(response.getBody().jsonPath().get("data[2].email").toString());
 		
-		
-//		reqSpec.baseUri("https://reqres.in/");
-//		reqSpec.basePath("api/users?page=2");
-//		
-//		Response res=reqSpec.get();
-//		
-//		ResponseBody responseBody=res.getBody();
-//		
-//		System.out.println(responseBody.asString());
-//		JsonPath path=responseBody.jsonPath();
-//		String name=path.get("data[0].first_name");
-//		
-//		System.out.println(path.get("data[2].avatar").toString());
-//		
-//		Assert.assertEquals(name, "George","Not found");
+
+		String body2=body.prettyPrint();
+//		JsonPath path=body2.jsonPath();
+		String name=path.get("data[0].first_name");
+
+		System.out.println(path.get("data[2].avatar").toString());
+		System.out.println("Name::"+name);
+		Assert.assertEquals(name, "Michael","Not found");
 	}	
 }

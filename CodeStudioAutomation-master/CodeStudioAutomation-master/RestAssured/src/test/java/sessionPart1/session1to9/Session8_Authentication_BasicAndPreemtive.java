@@ -30,7 +30,7 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Session8_Authentication_BasicAndPreemtive{
 
-//	@Test
+	@Test
 	void basicAuth() {
 		
 		RequestSpecification reqSpec= RestAssured.given().auth().basic("postman", "password");
@@ -48,7 +48,7 @@ public class Session8_Authentication_BasicAndPreemtive{
 		
 	}	
 	
-//	@Test
+	@Test
 	void preemtiveAuth() {
 		
 		RequestSpecification reqSpec= RestAssured.given().auth().preemptive().basic("postman", "password");

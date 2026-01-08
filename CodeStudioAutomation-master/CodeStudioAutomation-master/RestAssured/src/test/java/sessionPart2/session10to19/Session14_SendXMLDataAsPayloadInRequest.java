@@ -76,7 +76,7 @@ public class Session14_SendXMLDataAsPayloadInRequest {
 		res.then().body("pet.name", equalTo("doggie"));		
 	}
 
-//	@Test
+	@Test
 	void SendXMLDataAsPayloadInRequest() {
 		
 		String xmlData="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n"

@@ -34,7 +34,7 @@ public class Session9_Authentication_BearerToken{
 	@Test
 	void bearerToken() {
 		
-		String bearerToken="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";
+		String bearerToken="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";
 		RequestSpecification reqSpec= RestAssured.given().header("Authorization", "Bearer " + bearerToken);
 		
 		reqSpec.baseUri("http://api.github.com/");
@@ -44,7 +44,7 @@ public class Session9_Authentication_BearerToken{
 		
 		ResponseBody body=res.getBody();
 		
-		String resBody=body.asString();
+		String resBody=body.prettyPrint();
 		
 		System.out.println(resBody);
 		

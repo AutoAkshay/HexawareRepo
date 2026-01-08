@@ -36,7 +36,7 @@ public class Session5_ValidateHTTPresponseHeaders{
 	void test01() {
 		
 		RestAssured.baseURI="https://reqres.in/api/users/2";
-		Response response= given()
+		Response response= given().header("Authorization","x-api-key")
 		
 		.when().get();
 //		ValidatableResponse valRes=response.then().log().all();

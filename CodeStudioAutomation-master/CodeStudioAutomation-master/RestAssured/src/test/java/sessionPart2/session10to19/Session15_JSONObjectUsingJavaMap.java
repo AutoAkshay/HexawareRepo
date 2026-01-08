@@ -43,8 +43,9 @@ public class Session15_JSONObjectUsingJavaMap {
 		map.put("salary", "20000");
 		String courses[]= {"C++","JAVA"};
 		map.put("course", courses);
-		
-		RequestSpecification reqSpec=RestAssured.given().body(map).contentType(ContentType.JSON.toString());
+
+		RequestSpecification reqSpec=RestAssured.given().header("Authorization","x-api-key")
+				.body(map).contentType(ContentType.JSON.toString());
 		reqSpec.baseUri("https://reqres.in/");
 		reqSpec.basePath("api/users");
 		Response res= reqSpec.post();
