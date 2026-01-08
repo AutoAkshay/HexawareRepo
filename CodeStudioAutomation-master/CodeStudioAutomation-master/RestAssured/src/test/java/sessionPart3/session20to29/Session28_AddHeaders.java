@@ -44,13 +44,13 @@ public class Session28_AddHeaders {
         
         RestAssured.baseURI = "https://reqres.in/api/users";
         
-        RequestSpecification reqSpec = RestAssured.given();
+        RequestSpecification reqSpec = RestAssured.given().header("Authorization","x-api-key");
         reqSpec.headers(header);
         reqSpec.header("Header3","CheckHeader3");
         reqSpec.body(jsonObject.toString());
         reqSpec.contentType(ContentType.JSON);
         reqSpec.log().headers();
-        
+
         Response res = reqSpec.post();
         ValidatableResponse valRes = res.then().log().all().statusCode(201);
         

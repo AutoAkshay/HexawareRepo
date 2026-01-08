@@ -56,7 +56,7 @@ public class Session29_ResponseSpecificationAndResponseSpecBuilder {
 	public void createUser() throws JsonProcessingException {
 		
         RestAssured.baseURI = "https://reqres.in/api/users";        
-        RequestSpecification reqSpec = RestAssured.given();        
+        RequestSpecification reqSpec = RestAssured.given().header("Authorization","x-api-key");
         Response response = reqSpec.get();
         ValidatableResponse valRes = response.then().spec(res);
         
