@@ -13,7 +13,7 @@ public class Hooks{
     public void beforeScenario(){
         System.out.println("Browser launched");
         WebDriver driver=DriverFactory.getDriver();
-        driver.manage().window().getSize();
+        driver.manage().window().fullscreen();
     }
 
     @After
