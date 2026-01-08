@@ -14,6 +14,7 @@ public class Hooks{
         System.out.println("Browser launched");
         WebDriver driver=DriverFactory.getDriver();
         driver.manage().window().maximize();
+
     }
 
     @After
