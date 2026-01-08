@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 
 public class Hooks{
 
-
     @Before
     public void beforeScenario(){
         System.out.println("Browser launched");
