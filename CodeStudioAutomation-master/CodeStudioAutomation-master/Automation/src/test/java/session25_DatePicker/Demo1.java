@@ -14,10 +14,10 @@ public class Demo1 {
 
 	public void datePicker(String expectedDate, String expectedMonth, String expectedYear) throws InterruptedException {
 
-		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver = new ChromeDriver(options);
+//		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options = new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
 		driver.navigate().to(("https://www.dummyticket.com/dummy-ticket-for-visa-application/"));

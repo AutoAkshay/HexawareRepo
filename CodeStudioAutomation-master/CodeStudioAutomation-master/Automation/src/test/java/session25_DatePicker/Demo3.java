@@ -12,10 +12,7 @@ public class Demo3 {
 
 	public void datePicker(String expectedDate,String expectedMonth,String expectedYear) throws InterruptedException {
 
-		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
 		driver.get("https://jqueryui.com/datepicker/");
@@ -54,7 +51,7 @@ public class Demo3 {
 		
 		Demo3 datePicker=new Demo3();
 		
-		datePicker.datePicker("4","December","2024");
+		datePicker.datePicker("4","December","2026");
 	}
 
 }

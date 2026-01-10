@@ -29,9 +29,13 @@ public class ReadFromExcel {
 
         for (int i = 0; i <= rowSize; i++) {
 
-            if(sheet.getRow(i)==null) continue;;
-            for (int j = 0; j < cellSize; j++) {
-                if(sheet.getRow(i).getCell(j)==null)continue;
+            if(sheet.getRow(i)==null) {
+                continue;
+            }
+            for (int j = 0; j <= cellSize; j++) {
+                if(sheet.getRow(i).getCell(j)==null) {
+                    continue;
+                }
                 String content=sheet.getRow(i).getCell(j).toString();
                 System.out.print(content+" | ");
             }

@@ -28,6 +28,5 @@ public class ReadProperties {
         System.out.println(properties.getProperty("designation"));
         streamRead.close();
 
-
     }
 }

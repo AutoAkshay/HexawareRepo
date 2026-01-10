@@ -38,18 +38,15 @@ import io.restassured.specification.SpecificationQuerier;
 
 public class Session29_ResponseSpecificationAndResponseSpecBuilder {
 
-	ResponseSpecification res=null;
+	ResponseSpecification res;
 	
 	@BeforeMethod
 	public void statusValidation() {
-		
 		ResponseSpecBuilder builder=new ResponseSpecBuilder();
 		builder.expectStatusCode(200);
 		builder.expectStatusLine("HTTP/1.1 200 OK");
 		builder.expectContentType(ContentType.JSON);
 		builder.expectResponseTime(Matchers.lessThan(2000L));
-		
-		res= builder.build();
 	}
 	
 	@Test
@@ -59,6 +56,10 @@ public class Session29_ResponseSpecificationAndResponseSpecBuilder {
         RequestSpecification reqSpec = RestAssured.given().header("Authorization","x-api-key");
         Response response = reqSpec.get();
         ValidatableResponse valRes = response.then().spec(res);
+
+		System.out.println(valRes.extract().asPrettyString());
+
+		System.out.println(response.prettyPrint());
         
 	}
 }

@@ -4,8 +4,10 @@ public class ReverseEachWor {
 	
 	 public static void main(String[] args) {
 	        String str = "Java is   great and powerful language";
+		 	String removeExtraSpaces=str.replaceAll("\\s+"," ");
 
-	        String[] split = str.split("\\s+");
+	        String[] split = removeExtraSpaces.split("\\s+");
+
 	        
 	        for (String word : split) {
 	            char[] ch1=word.toCharArray();
