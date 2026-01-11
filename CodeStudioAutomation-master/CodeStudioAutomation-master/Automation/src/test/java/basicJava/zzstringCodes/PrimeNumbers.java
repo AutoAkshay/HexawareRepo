@@ -11,11 +11,10 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LetsNewTest {
+public class PrimeNumbers {
 
     @Test
-    public void calendarDemo() throws InterruptedException {
-        int num=11;
+    public static void primeNumberDemo(int num)  {
         int count=0;
         for (int i=1;i<=num;i++){
             if(num%i==0){
@@ -30,6 +29,10 @@ public class LetsNewTest {
         else {
             System.out.println("Not prime");
         }
+    }
+
+    public static void main(String[] args) {
+        PrimeNumbers.primeNumberDemo(11);
     }
 
 }
