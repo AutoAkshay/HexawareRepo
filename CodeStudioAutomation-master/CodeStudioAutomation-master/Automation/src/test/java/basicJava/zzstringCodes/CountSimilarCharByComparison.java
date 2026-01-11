@@ -1,5 +1,6 @@
 package basicJava.zzstringCodes;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,7 +32,13 @@ public class CountSimilarCharByComparison {
 		
 		// Print the similar characters found
 		System.out.println("Similar characters in str1 and str2 that are also present in str3:");
-		System.out.println(set1);
-		System.out.println(set2);
+		for (char ch:set1) {
+			System.out.print(ch);
+		}
+		System.out.println();
+		for (char ch:set2) {
+			System.out.print(ch);
+		}
+
 	}
 }
