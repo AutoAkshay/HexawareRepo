@@ -1,11 +1,14 @@
-package basicJava.zzarray;
+package basicJava.zzstringCodes;
 
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 
-public class Interview {
+public class MavericInterviewTest {
     //        Segregate the alphabets and numeric. - Done
 //            Find the number of words in the given string.
 //        Find the sum of digits in odd position.
