@@ -1,4 +1,4 @@
-package basicJava.collections;
+package session_Exceptionals;
 
 
 import org.openqa.selenium.By;
@@ -9,10 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
-public class Demo {
+public class SortedListAssertionsTest {
 
 
     WebDriver driver;
@@ -60,7 +62,7 @@ public class Demo {
            ls.add(option.getText());
         }
 
-        boolean b=Demo.sortedDecList(ls);
+        boolean b=SortedListAssertionsTest.sortedDecList(ls);
 
         Assert.assertTrue(b,"not matching");
         driver.quit();

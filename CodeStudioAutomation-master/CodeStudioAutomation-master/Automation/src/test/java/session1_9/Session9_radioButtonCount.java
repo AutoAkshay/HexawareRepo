@@ -9,10 +9,10 @@ public class Session9_radioButtonCount {
 	
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver=new ChromeDriver(options);
+//		System.setProperty("webdriver.driver.com", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options=new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
@@ -20,6 +20,8 @@ public class Session9_radioButtonCount {
 		int radioButton=driver.findElements(By.xpath("//*[@type='radio']")).size();
 		
 		System.out.println(radioButton);
+
+		driver.quit();
 	}
 
 }
