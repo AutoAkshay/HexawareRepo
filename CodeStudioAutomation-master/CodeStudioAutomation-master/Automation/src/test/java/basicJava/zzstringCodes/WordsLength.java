@@ -1,6 +1,6 @@
 package basicJava.zzstringCodes;
 
-public class StringProblem6 {
+public class WordsLength {
 
 	public static void main(String[] args) {
 		String str1 = "Akshay Anil Kalam";
