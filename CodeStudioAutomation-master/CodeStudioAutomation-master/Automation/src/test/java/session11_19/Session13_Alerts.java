@@ -10,10 +10,10 @@ public class Session13_Alerts {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options=new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		WebDriver driver=new ChromeDriver(options);
+//		System.setProperty("webdriver.chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options=new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		WebDriver driver=new ChromeDriver();
 		
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		Thread.sleep(3000);
