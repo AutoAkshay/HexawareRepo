@@ -1,8 +1,6 @@
 package basicJava.zzstringCodes;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class CountSimilarCharByComparison {
 	public static void main(String[] args) {
