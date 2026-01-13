@@ -3,6 +3,8 @@ package session11_19;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,11 +24,18 @@ public class Session18_WaitType {
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 //		Thread.sleep(5000);
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+//--------------Explicit wait
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button [@onclick='jsAlert()']")));
 	
 		System.out.println(driver.findElement(By.xpath("//button [@onclick='jsAlert()']")).getText());
+//-----------------FluentWait
+		FluentWait<WebDriver> fluent=new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2))
+				.ignoring(NoSuchElementException.class).withMessage("Element not found");
+
+		fluent.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button [@onclick='jsAlert()']")));
+
 	}
 
 }
