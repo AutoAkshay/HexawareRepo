@@ -1,7 +1,5 @@
 Feature: Purchase feature testing
 
-
-
   @MarketPlaceScenario
   Scenario Outline: Successful purchase of items from the marketplace
     Given the user launches the marketplace application
