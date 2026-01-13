@@ -21,11 +21,11 @@ public class Session1_BoxDimesion {
 		
 		driver.get("https://www.google.com/");
 		
-		WebElement fontSize= driver.findElement(By.name("q"));
+		WebElement boxSize= driver.findElement(By.name("q"));
 		
 		
-		Dimension dimension=fontSize.getSize();
-		Dimension dimensi1=fontSize.getSize();
+		Dimension dimension=boxSize.getSize();
+
 		System.out.println("===================");
 		System.out.println("height::"+dimension.height);
 		System.out.println("Width::"+dimension.width);

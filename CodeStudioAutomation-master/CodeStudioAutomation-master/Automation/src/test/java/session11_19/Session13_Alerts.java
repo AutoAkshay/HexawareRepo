@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 public class Session13_Alerts {
-	
-	public static void main(String[] args) throws InterruptedException {
+
+	@Test
+	public void alerts() throws InterruptedException {
 		
 //		System.setProperty("webdriver.chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
 //		ChromeOptions options=new ChromeOptions();
@@ -33,9 +35,10 @@ public class Session13_Alerts {
 		
 		driver.findElement(By.xpath("//button [@onclick='jsPrompt()']")).click();
 		Thread.sleep(3000);
+		String str=driver.switchTo().alert().getText();
 		driver.switchTo().alert().sendKeys("Akshay Kalam");	
 		driver.switchTo().alert().accept();
-		String str=driver.switchTo().alert().getText();
+		System.out.println(str);
 		System.out.println("Alert is accepted with message");
 		
 	}
