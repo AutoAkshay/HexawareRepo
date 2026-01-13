@@ -8,16 +8,12 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
-public class PracticeHexaware {
+public class RestAssuredIntTest {
 	
 	@Test
 	public void test() {
-		
-		
-		
+
+
+
 	}
-	
-	
-	
-	
 }
