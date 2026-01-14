@@ -88,7 +88,7 @@ public class CommonHelper {
 	}
 
 	public void assertionText(By locator, String expected) {
-		logger.info("Attempting to assert the elemet :: {}", locator);
+		logger.info("Attempting to assert the element :: {}", locator);
 		try {
 			String actual = wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
 			Assert.assertEquals(actual, expected);
