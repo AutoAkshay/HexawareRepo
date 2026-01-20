@@ -1,4 +1,4 @@
-package parsing;
+package sessionPart4.session30to31;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -6,14 +6,16 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import io.restassured.specification.SpecificationQuerier;
 import org.json.JSONObject;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RestAssuredIntTest {
+public class Session31_Req_Res_SpecBuilder {
 
 	RequestSpecification reqSpec;
 	ResponseSpecification resSpec;
@@ -44,5 +46,12 @@ public class RestAssuredIntTest {
 		resBuilder.expectContentType(ContentType.JSON);
 		resSpec=resBuilder.build();
 		ValidatableResponse valRes=res.then().spec(resSpec);
+		System.out.println(valRes.extract().asPrettyString());
+		QueryableRequestSpecification query= SpecificationQuerier.query(reqSpec);
+
+		System.out.println("Base URI :: "+query.getBaseUri());
+		System.out.println("Content type :: "+query.getContentType());
+		System.out.println("Payload ::  "+query.getBody().toString());
+		;
 	}
 }

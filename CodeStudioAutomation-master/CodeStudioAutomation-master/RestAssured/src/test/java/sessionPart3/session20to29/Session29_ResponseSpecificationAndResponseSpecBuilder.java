@@ -26,6 +26,7 @@ public class Session29_ResponseSpecificationAndResponseSpecBuilder {
 		builder.expectStatusLine("HTTP/1.1 200 OK");
 		builder.expectContentType(ContentType.JSON);
 		builder.expectResponseTime(Matchers.lessThan(2000L));
+		res=builder.build();
 	}
 	
 	@Test

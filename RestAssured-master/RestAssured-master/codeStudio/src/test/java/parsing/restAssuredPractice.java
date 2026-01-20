@@ -23,8 +23,6 @@ public class restAssuredPractice {
         JSONObject jsonObject=new JSONObject(str);
         JSONArray jsonArray=jsonObject.getJSONArray("data");
 
-//        System.out.println(str);
-
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject obj=jsonArray.getJSONObject(i);
             if(obj.get("id").equals(5)){
@@ -32,11 +30,6 @@ public class restAssuredPractice {
                 System.out.println(email+"::EmailID");
             }
         }
-
-//        "id": 5,
-//         "email": "charles.morris@reqres.in"
-
-
     }
 
 }

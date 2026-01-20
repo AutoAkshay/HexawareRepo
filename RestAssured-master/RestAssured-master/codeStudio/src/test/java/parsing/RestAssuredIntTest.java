@@ -1,58 +1,43 @@
-package day3;
+package parsing;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
-import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
 
-import static io.restassured.RestAssured.*;
-import java.util.Map;
+public class RestAssuredIntTest {
 
-public class CookiesDemo {
-
-	//	@Test(priority = 1)
-	void testCookies() {
-		given()
-
-				.when()
-				.get("https://www.google.com/")
-				.then()
-				.cookies("AEC", "AQTF6Hx8BCviKrFrcDugT53iz6nckfi25zPtwwxptQHAJw70RLIygPNs9g")
-				.log().all();
-
-	}
-
-	@Test(priority = 2)
-	void getCookiesInfo() {
-
-		RequestSpecification requestSpecification=RestAssured.given().baseUri("https://www.flipkart.com/");
-
-		Response res=requestSpecification.get();
-
-//		ValidatableResponse resVal=res.then().log().all();
+	@Test
+	public void test() throws JsonProcessingException {
 
 
 
-		Map<String, String> cookies=res.getCookies();
 
-		Headers headers=res.headers();
-		int p=1;
-		for(Header header:headers) {
 
-			System.out.println("Header "+p+"::"+header);
-			p++;
-		}
+		RequestSpecification req=RestAssured.given()
+				.header("Authorization","x-api-key ")
+				.contentType(ContentType.JSON).baseUri("https://reqres.in/api/users?page=2");
 
-//		System.out.println(cookies);
+		Response res=req.post();
 
-		for(Map.Entry entry:cookies.entrySet()) {
-			System.out.println(entry.getValue()+"::"+ entry.getKey());
-		}
+		res.prettyPrint();
+//
+//		POJO pojo1=mapper.readValue(body,POJO.class);
+//
+//		System.out.println("Email :: "+pojo1.getEmail());
+//		System.out.println("Password :: "+pojo1.getPassword());
+//
+//		JsonPath path=new JsonPath(res.prettyPrint());
+//
+//		String token=path.get("token");
+
+//		Assert.assertEquals(token,"QpwL5tke4Pnpja7X4","not matching");
 
 	}
-
 }
