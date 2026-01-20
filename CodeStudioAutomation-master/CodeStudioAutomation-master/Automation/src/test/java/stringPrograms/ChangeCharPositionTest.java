@@ -2,7 +2,7 @@ package stringPrograms;
 
 import org.testng.annotations.Test;
 
-public class ReplaceCharsTest {
+public class ChangeCharPositionTest {
 
     @Test
     public void replaceLastAndSecondLast() {
