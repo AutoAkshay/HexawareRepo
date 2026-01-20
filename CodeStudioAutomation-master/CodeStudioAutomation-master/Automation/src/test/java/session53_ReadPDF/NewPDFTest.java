@@ -11,5 +11,17 @@ import java.io.IOException;
 
 public class NewPDFTest {
 
+    @Test
+    public void test() throws IOException {
+        File stream=new File("./src/test/java/session53_ReadPDF/Name.pdf");
+        PDDocument document=PDDocument.load(stream);
+
+        PDFTextStripper stripper=new PDFTextStripper();
+
+        String name=stripper.getText(document);
+
+        System.out.println(name);
+    }
+
 
 }

@@ -6,14 +6,14 @@ import java.util.*;
 
 public class Anagram {
 
-//    str1 = "Silent"
+    //    str1 = "Silent"
 //    str2 ="Listen"
     @Test
-    public void anagramTest(){
+    public void anagramTest() {
         String str1 = "Conversation";
-        String str2 ="Voices rant on";
-        char[] c1=str1.replaceAll("\\s+","").toLowerCase().toCharArray();
-        char[] c2=str2.replaceAll("\\s+","").toLowerCase().toCharArray();
+        String str2 = "Voices rant on";
+        char[] c1 = str1.replaceAll("\\s+", "").toLowerCase().toCharArray();
+        char[] c2 = str2.replaceAll("\\s+", "").toLowerCase().toCharArray();
 
 
         if (c1.length != c2.length) {
@@ -22,17 +22,17 @@ public class Anagram {
         }
 
 
-        List<Character> ls1=new ArrayList<>();
-        List<Character> ls2=new ArrayList<>();
+        List<Character> ls1 = new ArrayList<>();
+        List<Character> ls2 = new ArrayList<>();
 
-        for (char c:c1){
+        for (char c : c1) {
             ls1.add(c);
         }
         Collections.sort(ls1);
 
         System.out.println(ls1);
 
-        for (char c:c2){
+        for (char c : c2) {
             ls2.add(c);
         }
 
@@ -40,11 +40,9 @@ public class Anagram {
 
         System.out.println(ls2);
 
-        if(ls1.equals(ls2)){
+        if (ls1.equals(ls2)) {
             System.out.println("It is Anagram word");
-        }
-
-        else {
+        } else {
             System.out.println("It is not Anagram word");
         }
 

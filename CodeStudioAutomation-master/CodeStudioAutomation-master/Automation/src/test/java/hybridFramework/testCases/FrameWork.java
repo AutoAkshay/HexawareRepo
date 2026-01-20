@@ -68,7 +68,7 @@ public class FrameWork extends BaseTest {
 		
 		List<WebElement> row=driver.findElements(By.xpath("//table[@name='BookTable']//tbody//tr"));
 		List<WebElement> head=driver.findElements(By.xpath("//table[@name='BookTable']//tbody//tr//th"));
-//		helper.clickOnElement(By.id(""));
+		helper.clickOnElement(By.id(""));
 		
 		System.out.println("Row size::"+row.size());
 		System.out.println("Row size::"+head.size());
