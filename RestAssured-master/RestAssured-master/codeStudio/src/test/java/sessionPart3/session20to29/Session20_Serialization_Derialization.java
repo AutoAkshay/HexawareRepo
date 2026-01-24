@@ -6,35 +6,15 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
-import org.json.JSONObject;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-
-import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-
-import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import io.restassured.response.Validatable;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.LogSpecification;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
 
 class Employee {
 	private String firstName;
-	private String lasttName;
+	private String lastName;
 	private String gender;
 	private int age;
 	private double salary;
@@ -47,12 +27,12 @@ class Employee {
 		this.firstName = firstName;
 	}
 
-	public String getLasttName() {
-		return lasttName;
+	public String getLastName() {
+		return lastName;
 	}
 
 	public void setLastName(String lasttName) {
-		this.lasttName = lasttName;
+		this.lastName = lasttName;
 	}
 
 	public String getGender() {
@@ -109,7 +89,7 @@ public class Session20_Serialization_Derialization {
 		Employee emp2= objMapper.readValue(empJSON,Employee.class);
 		System.out.println("********************************************************************");
 		System.out.println(emp2.getFirstName());
-		System.out.println(emp2.getLasttName());
+		System.out.println(emp2.getLastName());
 		System.out.println(emp2.getGender());
 		System.out.println(emp2.getAge());
 		System.out.println(emp2.getSalary());		
