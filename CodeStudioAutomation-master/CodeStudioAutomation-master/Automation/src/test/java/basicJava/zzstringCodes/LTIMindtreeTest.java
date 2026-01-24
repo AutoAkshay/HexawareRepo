@@ -14,7 +14,7 @@ public class LTIMindtreeTest {
         String[] str = string.split("\\s+");
 
         for (String st : str) {
-            String test = st.toUpperCase().substring(0, 1) + st.substring(1, st.length());
+            String test = st.toUpperCase().charAt(0) + st.substring(1);
             System.out.print(test + " ");
         }
 

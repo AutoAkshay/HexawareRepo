@@ -12,13 +12,13 @@ public class RemoveWordFromStringTest {
         StringBuilder builder = new StringBuilder();
 
 
-        for (int i = 0; i <= string.length() - target.length(); ) {
+        for (int i = 0; i < string.length();i++ ) {
 
-            if (string.substring(i, i + target.length()).equalsIgnoreCase(target)) {
-                i = i + target.length();   // move past "Java"
+            if (i<=string.length()-target.length() && string.substring(i, i + target.length()).equalsIgnoreCase(target)) {
+                i = i + target.length()-1;   // move past "Java"
             } else {
                 builder.append(string.charAt(i));
-                i++;
+
             }
         }
 

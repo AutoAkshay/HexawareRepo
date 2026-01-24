@@ -1,76 +1,29 @@
 package basicJava.collections;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
+final class FinalClass{
+    private final String name;
+    private final int id;
 
-import java.util.*;
+    FinalClass(String name,int id){
+        this.id=id;
+        this.name=name;
+    }
 
+    public String stuName(){
+        return name;
+    }
 
+    public int id(){
+        return id;
+    }
+
+}
 public class Demo {
+    public static void main(String[] args) {
+        FinalClass finalClass = new FinalClass("Akshay",3);
 
-
-    WebDriver driver;
-    public static boolean sortedAscList(List<String> actual) {
-        List<String> expected= new ArrayList<>(actual);
-        Collections.sort(expected);
-        for (String str:expected){
-            System.out.println("Expected list::"+str);
-        }
-        System.out.println();
-        for (String str:actual){
-            System.out.println("Actual list::"+str);
-        }
-        return expected.equals(actual);
-    }
-
-    public static boolean sortedDecList(List<String> actual) {
-        List<String> expected= new ArrayList<>(actual);
-
-        Collections.sort(expected,Collections.reverseOrder());
-
-        for (String str:expected){
-            System.out.println("Expected list::"+str);
-        }
-        System.out.println();
-        for (String str:actual){
-            System.out.println("Actual list::"+str);
-        }
-
-        return expected.equals(actual);
-    }
-
-    @Test
-    public void test() throws InterruptedException {
-
-        driver=new ChromeDriver();
-        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
-        Thread.sleep(5000);
-
-        driver.findElement(By.cssSelector("select#dropdown-class-example")).click();
-
-        List<WebElement> options=driver.findElements(By.xpath("//select[@id='dropdown-class-example']//option"));
-        List<String> ls=new ArrayList<>();
-        for (WebElement option:options){
-           ls.add(option.getText());
-        }
-
-        boolean b=Demo.sortedDecList(ls);
-
-        Assert.assertTrue(b,"not matching");
-        driver.quit();
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        System.out.println(finalClass.stuName()+finalClass.id());
     }
 }
 

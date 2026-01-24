@@ -20,7 +20,6 @@ public class ReplaceWordTest {
                 builder.append(str.charAt(i));
                 i++;
             }
-
         }
 
         System.out.println(builder);

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class repeatedWordsInString {
+public class RepeatedWordsCountingInStringTest {
 
     @Test
     public void test(){
