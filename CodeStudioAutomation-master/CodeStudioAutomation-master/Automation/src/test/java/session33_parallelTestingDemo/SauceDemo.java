@@ -17,10 +17,10 @@ public class SauceDemo {
 	
 	@BeforeMethod
 	public void beforeMethod() {
-		System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
-		driver = new ChromeDriver(options);
+//		System.setProperty("webDriver.Chrome.driver", "C:\\Software\\chromedriver-win64\\chromedriver.exe");
+//		ChromeOptions options = new ChromeOptions();
+//		options.setBinary("C:\\Software\\chromedriver-win64\\chrome-win64\\chrome.exe");
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 	}

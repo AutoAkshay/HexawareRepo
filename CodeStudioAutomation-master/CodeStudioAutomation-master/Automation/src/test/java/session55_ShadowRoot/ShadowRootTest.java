@@ -24,7 +24,6 @@ public class ShadowRootTest {
 
     @Test
     public void shadowRoot() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://selectorshub.com/xpath-practice-page/");

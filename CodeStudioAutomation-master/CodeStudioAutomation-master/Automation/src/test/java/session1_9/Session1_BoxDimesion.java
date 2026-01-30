@@ -23,13 +23,13 @@ public class Session1_BoxDimesion {
 		
 		WebElement boxSize= driver.findElement(By.name("q"));
 		
-		
+
 		Dimension dimension=boxSize.getSize();
 
 		System.out.println("===================");
 		System.out.println("height::"+dimension.height);
 		System.out.println("Width::"+dimension.width);
-		
+
 		driver.quit();
 		
 		
